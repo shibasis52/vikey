@@ -1,7 +1,7 @@
 #!/bin/bash
 namedfile=`cat /etc/named.conf| grep -i .db | grep -v "#" | awk -F '["]' {'print $2'}  | grep -v "cache" | sort -u`
 varfile=`ls /var/named/ | grep .db`
-
+#
 varray=$namedfile
   for v in ${varray[@]}
   do
